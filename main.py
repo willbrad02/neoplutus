@@ -18,7 +18,7 @@ def get_user_args() -> Namespace:
     arg_parser.add_argument(
         "-a",
         "--apple",
-        metavar="APPLE CARD PATH",
+        # metavar="APPLE CARD PATH",
         type=str,
         default="",
         help="Path to Apple credit card statement. Must be .csv"
@@ -27,7 +27,7 @@ def get_user_args() -> Namespace:
     arg_parser.add_argument(
         "-c",
         "--chase",
-        metavar="CHASE CARD PATH",
+        # metavar="CHASE CARD PATH",
         type=str,
         default="",
         help="Path to Chase credit card statement. Must be .csv"
@@ -36,7 +36,7 @@ def get_user_args() -> Namespace:
     arg_parser.add_argument(
         "-e",
         "--amex",
-        metavar="AMEX CARD PATH",
+        # metavar="AMEX CARD PATH",
         type=str,
         default="",
         help="Path to American Express credit card statement. Must be .csv"
