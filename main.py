@@ -4,11 +4,11 @@ Generate a dashboard showing
 from argparse import ArgumentParser, Namespace
 from pathlib import Path
 
-def get_user_args() -> Namespace:
+def _get_user_args() -> Namespace:
     """
     Get and parse command line arguments.
 
-    :return: Description
+    :return: Parsed command line arguments
     :rtype: Namespace
     """
     arg_parser: ArgumentParser = ArgumentParser(
@@ -44,7 +44,7 @@ def get_user_args() -> Namespace:
 
     return arg_parser.parse_args()
 
-def validate_user_args(apple: Path, chase: Path, amex: Path) -> None:
+def _validate_user_args(apple: Path, chase: Path, amex: Path) -> None:
 
     # Check Apple path
     if not apple.is_file():
@@ -53,16 +53,16 @@ def validate_user_args(apple: Path, chase: Path, amex: Path) -> None:
 
 if __name__ == "__main__":
     # Grab command line arguments
-    user_args: Namespace = get_user_args()
+    user_args: Namespace = _get_user_args()
 
-    # Translate args to Path objects
+    # Convert args to Path objects
     apple_path: Path = Path(user_args.apple)
     chase_path: Path = Path(user_args.chase)
     amex_path:  Path = Path(user_args.amex)
 
     # Validate args
     try:
-        validate_user_args(apple_path, chase_path, amex_path)
+        _validate_user_args(apple_path, chase_path, amex_path)
 
     # TODO: Specify error type?
     except Exception as e:
