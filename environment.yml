@@ -1,4 +1,4 @@
-name: clearspend
+name: neoplutus
 channels:
   - conda-forge
 dependencies:
