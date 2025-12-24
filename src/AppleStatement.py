@@ -2,7 +2,9 @@
 Definition for Apple credit card statement class
 """
 from pathlib import Path
+
 from Statement import Statement
+from string_resources import _AppleStatement
 
 class AppleStatement(Statement):
     def __init__(self, path: Path) -> None:
