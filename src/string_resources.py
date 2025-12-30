@@ -25,3 +25,9 @@ class _AppleStatement:
 
     AMOUNT: str = "Amount (USD)"
     """Amount"""
+
+    PURCHASE: str = "Purchase"
+    """Purchase transaction type"""
+
+    PAYMENT: str = "Payment"
+    """Payment transaction type"""
